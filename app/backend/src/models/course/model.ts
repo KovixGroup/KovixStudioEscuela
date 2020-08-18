@@ -4,8 +4,8 @@ import { ServerEntity } from '@skyframe/server';
 
 
 @Query(DomainModels.Course, {
-    details: q => q(q.id, q.name, q.schoolId),
-    list: q => q(q.id, q.name, q.schoolId)
+    details: q => q(q.id, q.year, q.letter, q.schoolId),
+    list: q => q(q.id, q.year, q.letter, q.schoolId)
 })
 export class Course extends ServerEntity(DomainModels.Course) {
 }

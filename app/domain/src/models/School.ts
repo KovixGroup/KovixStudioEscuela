@@ -1,9 +1,8 @@
-import { Entity, Field, Owns, PrimaryKey } from "@skyframe/core";
-import { Course } from "./Course";
+import { Entity, Field, Owns, PrimaryKey } from '@skyframe/core';
+import { Course } from './Course';
 
 @Entity()
 export class School {
-  
   @PrimaryKey()
   id: number;
 

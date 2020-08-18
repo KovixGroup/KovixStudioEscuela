@@ -1,16 +1,25 @@
-import { Entity, Field, ForeignKey, NeededBy, OwnedBy, PrimaryKey } from "@skyframe/core";
-import { CourseEnrollment } from "./CourseEnrollment";
-import { School } from "./School";
-import { SchoolClass } from "./SchoolClass";
+import {
+  Entity,
+  Field,
+  ForeignKey,
+  NeededBy,
+  OwnedBy,
+  PrimaryKey
+} from '@skyframe/core';
+import { CourseEnrollment } from './CourseEnrollment';
+import { School } from './School';
+import { SchoolClass } from './SchoolClass';
 
 @Entity()
 export class Course {
-  
   @PrimaryKey()
   id: number;
 
   @Field()
-  name: string;
+  year: number;
+
+  @Field()
+  letter: string;
 
   @ForeignKey(() => Course, { name: 'school_id' })
   schoolId: number;
