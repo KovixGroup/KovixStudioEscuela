@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Add School-Class</h1>
+<div mat-dialog-content>
+  <app-school-class-form [entity]="entity" #addForm></app-school-class-form>
+
+  <button
+      [ladda]="addForm.loading | async"
+      class="btn btn-primary"
+      (click)="submitForm()"
+  >
+    Save
+  </button>
+</div>

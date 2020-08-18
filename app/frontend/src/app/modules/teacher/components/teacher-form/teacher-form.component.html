@@ -1,0 +1,34 @@
+<ng-container *ngIf="formGroup">
+  <form [formGroup]="formGroup" class="w-full h-full">
+    <div class="bg-white shadow overflow-hidden rounded-md">
+      <div class="px-4 py-5 border-b border-gray-200 sm:px-6">
+        <div class="rich-text">
+          <h2>Basic Details</h2>
+        </div>
+        <div class="text-gray-500 text-md mt-2">
+          Please enter Teacher details below.
+        </div>
+      </div>
+      <div class="px-4 py-5">
+        <!-- FIRST NAME-->
+        <div class="col-span-3">
+          <mat-form-field class="w-full">
+            <mat-label>First-Name</mat-label>
+            <input id="firstName" formControlName="firstName" type="text" matInput>
+          </mat-form-field>
+        </div>
+        <!-- LAST NAME-->
+        <div class="col-span-3">
+          <mat-form-field class="w-full">
+            <mat-label>Last-Name</mat-label>
+            <input id="lastName" formControlName="lastName" type="text" matInput>
+          </mat-form-field>
+        </div>
+
+        
+      </div>
+    </div>
+
+    
+  </form>
+</ng-container>

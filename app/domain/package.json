@@ -1,0 +1,28 @@
+{
+  "name": "@escuela/domain",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "rimraf": "rimraf",
+    "jest": "jest",
+    "build": "yarn run clean && yarn run tsc",
+    "clean": "yarn run rimraf ./dist",
+    "test": "yarn run jest"
+  },
+  "devDependencies": {
+    "jest-junit": "^10.0.0",
+    "typescript": "^3.7.3"
+  },
+  "directories": {
+    "dist": "dist",
+    "test": "test"
+  },
+  "files": [
+    "dist"
+  ]
+}

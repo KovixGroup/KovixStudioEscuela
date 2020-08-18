@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Edit User</h1>
+<div mat-dialog-content>
+    <app-user-form skf-preset="editForm" #editForm>
+    </app-user-form>
+
+    <button
+        [ladda]="editForm.loading | async"
+        class="btn btn-primary"
+        (click)="submitForm()"
+    >
+        Save
+    </button>
+</div>

@@ -1,0 +1,7 @@
+{
+  "appId": "com.escuela.mobile",
+  "appName": "mobile",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www"
+}

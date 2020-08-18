@@ -1,0 +1,36 @@
+<div class="content-layout fullwidth-standard-normal-scroll">
+  <div class="header flex flex-row justify-between items-end">
+    <div class="container">
+      <div class="breadcrumb">
+        <span class="path">USER</span>
+        <span class="separator">/</span>
+        <span class="path">ADD</span>
+      </div>
+      <h1>Add User</h1>
+    </div>
+  </div>
+  <div class="main">
+    <div class="max-w-3xl">
+      <app-user-form #entityForm></app-user-form>
+
+      <div class="flex items-center justify-end mt-6">
+        <button
+            [disabled]="entityForm.loading | async"
+            (click)="navigateToListPage()"
+            mat-button
+        >
+          Cancel
+        </button>
+        <button
+            class="px-6 ml-3 text-white"
+            color="primary"
+            mat-flat-button
+            [ladda]="entityForm.loading | async"
+            (click)="submitForm()"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

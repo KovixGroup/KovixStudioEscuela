@@ -1,0 +1,46 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - development
+      - qa
+      - production
+
+jobs:
+  - job:
+    condition: and(succeeded(), ne(variables['Build.RequestedFor'], 'Kovix CI'))
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '12.16.1'
+        displayName: 'Install Node.js'
+
+      - task: Yarn@3
+        displayName: 'Installing dependencies'
+
+      - task: Yarn@3
+        inputs:
+          arguments: bootstrap
+        displayName: 'Bootstraping the project'
+
+      - task: Yarn@3
+        inputs:
+          arguments: build
+        displayName: 'Building packages'
+
+      - task: Yarn@3
+        inputs:
+          arguments: test
+        displayName: 'Running test-cases'
+
+      - task: PublishTestResults@2
+        condition: succeededOrFailed()
+        inputs:
+          testResultsFormat: 'JUnit'
+          testResultsFiles: '**/TESTS-*.xml'
+          mergeTestResults: true
+          failTaskOnFailedTests: true
+          testRunTitle: 'Build: $(Build.BuildNumber) - Branch: $(Build.SourceBranchName)'
+        displayName: 'Collecting test results'

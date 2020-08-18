@@ -1,0 +1,76 @@
+<div class="content-layout fullwidth-standard-normal-scroll">
+    <div class="header flex flex-row justify-between items-end">
+        <div class="container">
+            <div class="breadcrumb">
+                <span class="path">COURSE ENROLLMENT</span>
+                <span class="separator">/</span>
+                <span class="path">DETAIL</span>
+            </div>
+            <h1>Course-Enrollment detail</h1>
+        </div>
+        <div>
+            <div class="xs:hidden">
+                <button mat-flat-button color="primary" (click)="editEntity()">
+                    <mat-icon svgIcon="edit"></mat-icon>
+                    Edit
+                </button>
+                <button
+                    class="ml-2"
+                    mat-flat-button
+                    color="warn"
+                    (click)="deleteEntity()"
+                >
+                    <mat-icon svgIcon="delete"></mat-icon>
+                    Delete
+                </button>
+            </div>
+
+            <div class="hidden xs:flex">
+                <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                    <mat-icon svgIcon="more_vert"></mat-icon>
+                </button>
+                <mat-menu #actionsMenu="matMenu">
+                    <button (click)="editEntity()" mat-menu-item>
+                        <mat-icon class="icon-size-20" svgIcon="edit"></mat-icon>
+                        <span class="ml-2">Edit</span>
+                    </button>
+                    <button (click)="deleteEntity()" mat-menu-item>
+                        <mat-icon class="icon-size-20" svgIcon="delete"></mat-icon>
+                        <span class="ml-2">Delete</span>
+                    </button>
+                </mat-menu>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="max-w-3xl">
+            <ng-container *ngIf="entity | async as entity">
+                <app-course-enrollment-detail title="Basic details" class="w-full" [entity]="entity">
+                </app-course-enrollment-detail>
+
+                <button
+  *ngIf="entity.courseId"
+  class="my-6"
+  mat-stroked-button
+  color="primary"
+  (click)="goToCourseDetail(entity.courseId)"
+>
+  <mat-icon class="icon-size-20 mr-1">visibility</mat-icon>
+  View Course
+</button>
+
+<button
+  *ngIf="entity.studentId"
+  class="my-6"
+  mat-stroked-button
+  color="primary"
+  (click)="goToStudentDetail(entity.studentId)"
+>
+  <mat-icon class="icon-size-20 mr-1">visibility</mat-icon>
+  View Student
+</button>
+
+            </ng-container>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<ng-container *ngIf="formGroup">
+  <form [formGroup]="formGroup" class="w-full h-full">
+    <div class="bg-white overflow-hidden rounded-md mb-2">
+      <div class="px-4 py-2 border-b border-gray-200">
+        <div class="">
+          <h2>Basic Details</h2>
+        </div>
+        <div class="text-gray-500 text-md mt-2">
+          Please enter User details below.
+        </div>
+      </div>
+      <div class="px-4 pt-2 pb-4">
+        <!-- EMAIL-->
+        <div>
+          <label for="email" class="block text-sm font-medium leading-5 text-gray-700">
+            Email
+          </label>
+          <div class="mt-1 relative rounded-md shadow-sm h-10">
+            <input id="email" formControlName="email" class="form-input block w-full sm:text-sm sm:leading-5">
+          </div>
+        </div>
+        <!-- PASSWORD-->
+        <div>
+          <label for="password" class="block text-sm font-medium leading-5 text-gray-700">
+            Password
+          </label>
+          <div class="mt-1 relative rounded-md shadow-sm h-10">
+            <input id="password" formControlName="password" class="form-input block w-full sm:text-sm sm:leading-5">
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    
+  </form>
+</ng-container>

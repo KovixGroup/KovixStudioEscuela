@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Edit Student</h1>
+<div mat-dialog-content>
+    <app-student-form skf-preset="editForm" #editForm>
+    </app-student-form>
+
+    <button
+        [ladda]="editForm.loading | async"
+        class="btn btn-primary"
+        (click)="submitForm()"
+    >
+        Save
+    </button>
+</div>

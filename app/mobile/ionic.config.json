@@ -1,0 +1,7 @@
+{
+  "name": "escuela-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

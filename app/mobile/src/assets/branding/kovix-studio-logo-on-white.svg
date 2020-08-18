@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3148.404" height="776.729" viewBox="0 0 3148.404 776.729">
+  <defs>
+    <linearGradient id="linear-gradient" y1="-0.138" x2="1.347" y2="1.337" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0389fb"/>
+      <stop offset="1" stop-color="#0171ff"/>
+    </linearGradient>
+    <filter id="Path_14" x="0" y="0" width="767.525" height="767.525" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="25" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="ovix" x="707.988" y="50.729" width="1339" height="726" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Studio" x="2290.404" y="355.83" width="858" height="328" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Line_1" x="2139.759" y="234.574" width="61.741" height="424.55" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_13" data-name="Group 13" transform="translate(-14.741 44.335)">
+    <g transform="matrix(1, 0, 0, 1, 14.74, -44.33)" filter="url(#Path_14)">
+      <path id="Path_14-2" data-name="Path 14" d="M37.94,0H578.585a37.94,37.94,0,0,1,37.94,37.94V578.585a37.94,37.94,0,0,1-37.94,37.94H37.94A37.94,37.94,0,0,1,0,578.585V37.94A37.94,37.94,0,0,1,37.94,0Z" transform="translate(65.5 65.5)" stroke="#1592e6" stroke-width="1" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_8" data-name="Group 8" transform="translate(227.641 100.428)">
+      <path id="Path_10" data-name="Path 10" d="M760.776,319.7l236.495-250.7H875.181L760.776,190.283V319.7Z" transform="translate(-614.921 -66.317)" fill="#fff"/>
+      <path id="Path_11" data-name="Path 11" d="M780.987,194.914V67.305H668.511V522.513H780.987v-327.6Z" transform="translate(-668.511 -67.305)" fill="#fff"/>
+      <g id="Group_7" data-name="Group 7" transform="translate(155.584 213.077)">
+        <path id="Path_12" data-name="Path 12" d="M840.7,202.093l-73.765,78.2L871.571,447.015H994.413Z" transform="translate(-766.93 -202.093)" fill="#fff"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 14.74, -44.33)" filter="url(#ovix)">
+      <text id="ovix-2" data-name="ovix" transform="translate(727.49 611.23)" font-size="559" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.06em"><tspan x="0" y="0">ovix</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 14.74, -44.33)" filter="url(#Studio)">
+      <text id="Studio-2" data-name="Studio" transform="translate(2309.9 608.33)" font-size="236" font-family="Lato-Regular, Lato" letter-spacing="0.128em"><tspan x="0" y="0">Studio</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 14.74, -44.33)" filter="url(#Line_1)">
+      <line id="Line_1-2" data-name="Line 1" x1="4.743" y2="379.4" transform="translate(2165.26 254.15)" fill="none" stroke="#909090" stroke-width="12"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<div class="w-full">
+  <mat-form-field class="xs:w-full sm:w-full w-2/3">
+    <mat-label>CourseEnrollment</mat-label>
+    <input
+        [formControl]="searchInput"
+        [matAutocomplete]="auto"
+        type="text"
+        matInput
+    />
+  </mat-form-field>
+</div>
+
+<mat-autocomplete #auto="matAutocomplete">
+  <mat-option
+      *ngFor="let option of filteredOptions | async"
+      [value]="selectedDisplayText(option)"
+      (click)="optionSelected(option, $event)"
+  >
+    {{ option.courseId }}
+  </mat-option>
+</mat-autocomplete>

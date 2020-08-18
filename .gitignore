@@ -1,0 +1,22 @@
+# Project files
+node_modules
+*.log
+lib
+dist
+.idea
+.env
+.vscode
+.npmrc
+
+# System Files
+.DS_Store
+Thumbs.db
+**/.DS_Store
+
+# Package Manager Files
+package-lock.json
+**/package-lock.json
+yarn.lock
+
+*.tgz
+xml

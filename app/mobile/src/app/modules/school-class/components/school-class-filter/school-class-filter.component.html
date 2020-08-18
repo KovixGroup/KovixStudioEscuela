@@ -1,0 +1,51 @@
+<ng-container *ngIf="formGroup">
+  <form [formGroup]="formGroup">
+    <div class="card col-md-12">
+      <h4>Filters</h4>
+
+      
+        <input id="id"  formControlName="id" placeholder="Id" class="form-control col-md-12 mt-2" />
+
+      
+        <input id="level"  formControlName="level" placeholder="Level" class="form-control col-md-12 mt-2" />
+
+      
+        <input id="subject"  formControlName="subject" placeholder="Subject" class="form-control col-md-12 mt-2" />
+
+      
+        <input id="courseId"  formControlName="courseId" placeholder="Course-Id" class="form-control col-md-12 mt-2" />
+
+      
+        <input id="teacherId"  formControlName="teacherId" placeholder="Teacher-Id" class="form-control col-md-12 mt-2" />
+
+      
+
+      <p class="mt-3 mb-2"><b>Date</b></p>
+      <date-range formControlName="createdAt"></date-range>
+
+      <div class="text-right mt-6">
+        <button
+          class="btn btn-sm btn-outline-secondary"
+          (click)="clearFilter()"
+          type="button"
+        >
+          Clear
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          (click)="saveFilter()"
+          type="button"
+        >
+          Save Filter
+        </button>
+        <button
+          (click)="applyFilter()"
+          class="btn mr-0 btn-sm btn-primary"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+  </form>
+</ng-container>

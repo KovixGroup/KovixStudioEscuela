@@ -1,0 +1,43 @@
+{
+  "name": "escuela",
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "scripts": {
+    "lerna": "lerna",
+    "clean": "yarn run lerna run clean",
+    "purge": "yarn run lerna clean --yes && rimraf node_modules",
+    "setup": "yarn run bootstrap && yarn run build",
+    "bootstrap": "yarn run lerna bootstrap",
+    "build": "yarn run lerna run build --sort",
+    "test": "yarn run lerna run test",
+    "lint": "yarn run lint:prettier && yarn run lint:eslint",
+    "lint:prettier": "prettier --config .prettierrc --ignore-path .eslintignore --write",
+    "lint:eslint": "eslint --fix -c .eslintrc.json --ignore-path .eslintignore",
+    "publish": "yarn run lerna publish",
+    "pr": "yarn run setup:complete && yarn run test:complete"
+  },
+  "dependencies": {
+    "@skyframe/core": "^2.0.20"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/node": "^12.12.24",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "2.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.8.0",
+    "jest-junit": "^6.4.0",
+    "lerna": "^3.20.2",
+    "lint-staged": "^9.5.0",
+    "nodemailer": "^6.4.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.7.4"
+  }
+}
